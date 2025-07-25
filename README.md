@@ -1,9 +1,10 @@
 <p align="center">
-  <strong style="font-size: 24px;">BEV-LLM: Leveraging Multimodal BEV Maps for Scene Captioning in Autonomous Driving</strong>
+  <strong style="font-size: 36px;">BEV-LLM: Leveraging Multimodal BEV Maps for Scene Captioning in Autonomous Driving</strong>
 </p>
 
 <p align="center">
-  <img src="figures/method_screen.png" alt="Just keep smiling" width="800" title="Overview of the BEV-LLM Method" >
+  <img src="figures/method_screen.png" alt="Just keep smiling" width="800" title="Overview of the BEV-LLM Method">
+  <em>
 </p>
 
 <p align="center">
