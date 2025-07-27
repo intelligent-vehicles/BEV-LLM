@@ -21,7 +21,7 @@ class NuScenesLidarLLmCaptionDataset(NuScenesDataset):
         tensor_root (str, optional): Path to the directory with precomputed BEV `.pt` files (required if `load_from_file` is True).
     """
 
-    def __init__(self, dataroot, split, cfg=None, Tokenizer=None, special_split=None, load_from_file=False, tensor_root=None) -> None:
+    def __init__(self, dataroot, split, cfg=None, Tokenizer=None, load_from_file=False, tensor_root=None) -> None:
         # Path to the JSON file with QA data
         self.json_file = dataroot + 'nuCaptionLidarView_' + split + '.json'
         self.json_data_root = dataroot

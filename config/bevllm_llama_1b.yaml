@@ -1,0 +1,46 @@
+# config.yaml
+
+general:
+  mode: "train"  # Options: "train" or "eval"
+  cache_dir: "./model_cache"
+  snapshot_path: "snapshot.pt"
+
+training:
+  total_epochs: 10
+  save_every: 2
+  batch_size: 16
+  learning_rate: 1e-4
+  weight_decay: 0.05
+  betas: [0.9, 0.999]
+  use_ddp: true
+
+evaluation:
+  batch_size: 1
+  start_step: 0
+  stop_step: null  # Use null to indicate "run to end"
+
+model:
+  model_id: "your-hf-model-id"
+  access_token: "your-hf-access_token"
+  use_lora: true
+  lora_config:
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    bias: "none"
+    target_modules:
+      - "up_proj"
+      - "down_proj"
+      - "gate_proj"
+      - "k_proj"
+      - "q_proj"
+      - "v_proj"
+      - "o_proj"
+
+
+dataset:
+  root: "/anvme/workspace/v103fe15-bev_features/data/sets/nuscenes/"
+  tensor_root: "/anvme/workspace/v103fe15-bev_features/bev_features/train/"
+  type: "NuScenesViewCaptionDataset"
+  split: "train"
+  load_from_file: true
